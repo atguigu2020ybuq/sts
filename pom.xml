@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.atguigu.maven</groupId>
+	<artifactId>A</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>A</name>
+
+	<dependencies>
+		<!-- A项目直接依赖E项目 -->
+		<dependency>
+			<groupId>com.atguigu.maven</groupId>
+			<artifactId>E</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<!-- A项目直接依赖B项目 -->
+		<dependency>
+			<groupId>com.atguigu.maven</groupId>
+			<artifactId>B</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			  <!-- 排除依赖的jar包注意:只提供 g和 a -->
+			<exclusions>
+				<exclusion>
+					<groupId>commons-io</groupId>
+					<artifactId>commons-io</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.6</version>
+</dependency>
+		
+
+	</dependencies>
+</project>
